@@ -19,10 +19,7 @@ class main extends CI_Controller {
 * map to /index.php/welcome/<method_name>
 * @see https://codeigniter.com/user_guide/general/urls.html
 */
-public function index()
-{
-echo"hello";
-}
+//Registration
 public function form()
 {
 $this->load->view("regform");
@@ -53,12 +50,14 @@ $this->mainmodel->regist($a,$b);
 redirect(base_url().'main/form');
    }
 }
+	//List View
 public function viewtab()
 {
 $this->load->model('mainmodel');
    $data['n']=$this->mainmodel->viewtab();
 $this->load->view('viewtab',$data);
 }
+	//Approve/Reject
 public function approve()
 {
 $this->load->model('mainmodel');
@@ -73,6 +72,7 @@ $id=$this->uri->segment(3);
 $this->mainmodel->reject($id);
 redirect('main/viewtab','refresh');
 }
+	//Login
 public function log()
 {
 $this->load->view('login');
