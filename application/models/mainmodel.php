@@ -1,6 +1,7 @@
 <?php
 class mainmodel extends CI_model
 {
+	//Insertion to the database
 public function regist($a,$b)
 {
 $this->db->insert("login",$b);
@@ -8,11 +9,12 @@ $userid=$this->db->insert_id();
 $a["user_id"]=$userid;
 $this->db->insert("regtable",$a);
 }
+	//Password encryption
 public function ecp($pass)
 {
 return password_hash($pass, PASSWORD_BCRYPT);
 }
-
+//List View
 public function viewtab()
 {
 $this->db->select('*');
@@ -20,6 +22,7 @@ $this->db->join('login','login.id=regtable.user_id','inner');
   $qry=$this->db->get("regtable");
   return $qry;
  }
+	//Approve/Reject
 public function approve($id)
  {
 $this->db->set('status','1');
@@ -33,8 +36,9 @@ $this->db->set('status','2');
 $qry=$this->db->where("id",$id);
 $qry=$this->db->update("login");
   return $qry;
-       }
-       public function selectpass($unm,$pass)
+  }
+	//Login
+public function selectpass($unm,$pass)
 {
 $this->db->select('password');
 $this->db->from("login");
