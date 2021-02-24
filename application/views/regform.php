@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>new</title>
+	<title>Registration</title>
 </head>
 <style>
 table,td{
@@ -52,15 +52,15 @@ table,td{
 					<td><input type="text" name="phn"  required minlength="10"maxlength="10"></td>
 					</tr>
 					<tr>
-					
-				    <td>Email:</td>
+					<td>Email:</td>
 					<td><input type="email" name="email" required></td>
 				    </tr>
-				    
-					
-			</table>
+				    </table>
 			<input type="submit" value="submit" name="submit">
 		</fieldset>
 </form>
 </body>
 </html>
+
+					
+			
