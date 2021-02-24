@@ -6,15 +6,17 @@
 <style>
 table,td{
 	border:3px solid black;
-	padding:20px;
+	padding:10px;
 	margin:50px;
 	border-collapse:collapse;
 	text-align:center;
 	}	
-	
+	h1{
+		text-align:center;
+	}
 </style>
 <body>
-
+<h1>User Details</h1>
 	<form method="post" action="">
 	
 	
