@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>new</title>
+	<title>List View</title>
 </head>
 <style>
 table,td{
